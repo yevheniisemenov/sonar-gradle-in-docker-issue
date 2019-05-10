@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'org.sonarqube' version "2.7"
+}
+
+group 'yevhenii.semenov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+sonarqube {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
